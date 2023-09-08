@@ -1,1 +1,1 @@
-# spring-boot-starter-logging
+# log-and-trace-starter
