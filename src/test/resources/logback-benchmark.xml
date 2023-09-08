@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <include resource="org/pepper8081/logandtrace/appender.xml"/>
+    <logger name="org.pepper8081.logandtrace" level="info"/>
+    <root level="info">
+<!--        <appender-ref ref="PLAIN_CONSOLE"/>-->
+        <appender-ref ref="JSON_CONSOLE"/>
+    </root>
+</configuration>
