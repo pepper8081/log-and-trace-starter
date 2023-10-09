@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.pepper8081</groupId>
+    <groupId>ru.pepper8081</groupId>
     <artifactId>log-and-trace-starter</artifactId>
     <version>0.2.1</version>
-    <description>Spring Boot Starter for common logging and tracing</description>
+    <description>Spring boot starter for common logging and tracing</description>
     <packaging>jar</packaging>
 
     <properties>
