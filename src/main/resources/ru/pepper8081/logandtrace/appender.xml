@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<included>
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <conversionRule conversionWord="eventType" converterClass="ru.pepper8081.logandtrace.layout.plain.EventParamConverter"/>
+    <conversionRule conversionWord="fixedLogger" converterClass="ru.pepper8081.logandtrace.layout.plain.LoggerParamConverter"/>
+    <conversionRule conversionWord="logType" converterClass="ru.pepper8081.logandtrace.layout.plain.LogTypeParamConverter"/>
+
+    <appender name="PLAIN_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr([%20.20t]){faint} %clr(%-40.40fixedLogger{39}){cyan} %clr([%-5.5logType]){faint} %clr([%-0.32eventType]){faint} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="JSON_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ru.pepper8081.logandtrace.layout.json.EnhancedJsonLayout">
+                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter"/>
+                <appendLineSeparator>true</appendLineSeparator>
+                <includeMDC>false</includeMDC>
+                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSS</timestampFormat>
+                <includeContextName>false</includeContextName>
+            </layout>
+        </encoder>
+    </appender>
+
+</included>

@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=ru.pepper8081.logging.LoggingAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=ru.pepper8081.logandtrace.LoggingAutoConfiguration
